@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 63, 134);
+    position: relative;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.navbar {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 140px;
+    width: 80%;
+    border: 2px solid gray;
+    border-radius: 7px;
+}
+
+.playerScoreDiv, .gameTitle, .computerScoreDiv {
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerScoreDiv, .computerScoreDiv {
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 8.5vw;
+}
+
+.gameTitle {
+    width: 10vw;
+}
+
+.playerName, .playerScore, .gameTitle, .computerName, .computerScore {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.playerScore, .computerScore {
+    color: black;
+    font-size: 40px;
+}
+
+.playerName, .computerName {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: gray;
+    text-align: center;
+}
+
+.gameSection {
+    margin-top: 20px;
+    height: 50vh;
+    width: 75vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.playerChoice, .resultDiv, .computerChoice {
+    width: 15vw;
+    height: 30vh;
+}
+
+.playerChoice {
+    cursor: pointer;
+}
+
+.playerChoice, .computerChoice {
+    position: relative;
+    border-radius: 50%;
+    background-color: chocolate;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.innerRing {
+    position: absolute;
+    height: 22vh;
+    width: 11vw;
+    border-radius: 50%;
+    top: 13%;
+    left: 13%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.innerRing img {
+    height: 100px;
+}
+
+.rock div, .paper div, .scissor div {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.resultDiv {
+    border: none;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.result {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.reset {
+    display: flex;
+}
+
+.reset button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: blueviolet;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reset button:hover {
+    background-color: rgb(126, 0, 243);
+    font-size: 18px;
+    transition: .5s all;
+}
+
+.choice {
+    height: 85vh;
+    width: 85vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 2%;
+    z-index: 1; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(121, 113, 113);
+}
+
+.choice div img {
+    height: 100px;
+    cursor: pointer;
+    transition: .25s all;
+}
+
+.choice div img:hover {
+    height: 105px;
+}
+
+.choice {
+    display: none;
+}
+
+@media only screen and (max-width: 700px)  {
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .playerScoreDiv, .computerScoreDiv {
+        width: 21vw;
+    }
+    .gameSection {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .playerChoice, .resultDiv, .computerChoice {
+        width: 30vw;
+        height: 15vh;
+    }
+    .innerRing {
+        height: 11vh;
+        width: 22vw;
+        top: 13%;
+        left: 13%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .innerRing img {
+        height: 60px;
+    }
+    .result {
+        font-size: 18px;
+    }
+    .reset {
+        width: 100%;
+        justify-content: center;
+    }
+    .reset button {
+        width: 70%;
+    }
+    .choice {
+        height: 90vh;
+        width: 100%;
+        flex-direction: column;
+    }
+}
